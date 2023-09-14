@@ -8,25 +8,49 @@ class Program
         string userInput = Console.ReadLine();
         int number = int.Parse(userInput);
 
+        string letterGrade = "";
+
         if (number >= 90)
         {
-            Console.WriteLine("Congratulations, you passed and got an A!");
+            letterGrade = "A";
         }
         else if (number >= 80)
         {
-            Console.WriteLine("Congratulations, you passed and got a B!");
+            letterGrade = "B";
         }
+
         else if (number >= 70)
         {
-            Console.WriteLine("Congratulations, you passed and got a C!");
+            letterGrade = "C";
         }
+
         else if (number >= 60)
         {
-            Console.WriteLine("You got a D. Try again next time.");
+            letterGrade = "D";
         }
         else
         {
-            Console.WriteLine("You got an F. Try again next time.");
+            letterGrade = "F";
         }
+
+        if (number >= 67 && number <= 69 || number >= 77 && number <= 79 || number >= 87 && number <= 89 || number >= 97)
+        {
+            Console.WriteLine($"You got a/an {letterGrade}+!");
+        }
+        else
+        {
+            Console.WriteLine($"You got a/an {letterGrade}!");
+        }
+
+        if (number >= 70)
+        {
+            Console.WriteLine("Congratualtions you passed!");
+        }
+        else
+        {
+            Console.WriteLine("Try again next time.");
+        }
+
+
     }
 }
