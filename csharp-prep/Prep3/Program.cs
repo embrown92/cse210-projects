@@ -7,7 +7,10 @@ class Program
     {
 
         Console.Write("Guess the magic number between 1 and 100.");
-        int magicNumber = 6;
+        // int magicNumber = 6;
+
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 101);
 
         int guessNumber = -1;
 
@@ -16,11 +19,11 @@ class Program
             Console.Write(" What is your guess? ");
             guessNumber = int.Parse(Console.ReadLine());
 
-            if (guessNumber < 6)
+            if (guessNumber < magicNumber)
             {
                 Console.WriteLine("Higher!");
             }
-            else if (guessNumber > 6)
+            else if (guessNumber > magicNumber)
             {
                 Console.WriteLine("Lower!");
             }
